@@ -103,6 +103,13 @@ mark{background:#ffd75e;color:#222;border-radius:3px}
 .app.open .chat{transform:none}
 .back{display:grid}.msgs{padding:12px}.msg{max-width:86%}.emoji{width:calc(100% - 20px)}}
 </style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#17212b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NEXCHAT">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
 <body>
 <div class="app" id="app">
@@ -480,5 +487,6 @@ setTimeout(renderList, 600);
 initAuth();
 })();
 </script>
+<script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}</script>
 </body>
 </html>
